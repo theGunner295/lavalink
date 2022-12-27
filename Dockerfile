@@ -19,7 +19,8 @@ RUN chown lavalink:lavalink /app
 
 USER lavalink
 
-RUN wget "https://github.com/Frederikam/Lavalink/releases/download/${LAVALINK_VERSION}/Lavalink.jar" -P /opt/Lavalink
+RUN wget "https://github.com/freyacodes/Lavalink/releases/download/${LAVALINK_VERSION}/Lavalink.jar" -P /app
+
 
 USER root
 
