@@ -5,7 +5,8 @@ LABEL description="This is a Lavalink server"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apk add openjdk17-jre-headless
+RUN apk add libgcc
+RUN apk add openjdk17
 
 WORKDIR /app
 
