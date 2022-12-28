@@ -9,23 +9,13 @@ ENV LAVALINK_VERSION=3.6.2
 RUN apk update --no-cache
 RUN apk add --no-cache wget ca-certificates nss mpg123
 
-# Run as non-root user
-RUN addgroup -g 322 lavalink && \
-    adduser -S -u 322 -G lavalink lavalink
-
 WORKDIR /app
-
-RUN chown lavalink:lavalink /app
-
-USER lavalink
 
 RUN wget "https://github.com/freyacodes/Lavalink/releases/download/${LAVALINK_VERSION}/Lavalink.jar" -P /app
 
-USER root
-
 RUN apk del wget ca-certificates
 
-COPY run.sh .
+COPY . .
 
 EXPOSE 2333
 
