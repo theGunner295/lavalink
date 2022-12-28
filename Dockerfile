@@ -21,11 +21,13 @@ USER lavalink
 
 RUN wget "https://github.com/freyacodes/Lavalink/releases/download/${LAVALINK_VERSION}/Lavalink.jar" -P /app
 
-
 USER root
 
 RUN apk del wget ca-certificates
 
+COPY run.sh .
+
 EXPOSE 2333
 
-ENTRYPOINT "java" "-jar" "/app/Lavalink.jar"
+ENTRYPOINT [ "/app/run.sh" ]
+#ENTRYPOINT "java" "-jar" "/app/Lavalink.jar"
