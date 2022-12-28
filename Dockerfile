@@ -8,6 +8,9 @@ ENV LAVALINK_VERSION=3.6.2
 # Update system
 RUN apk update --no-cache
 RUN apk add --no-cache wget ca-certificates nss mpg123
+RUN apk add libgcc
+RUN apk add libstdc++
+RUN apk add ncurses-libs
 
 # Run as non-root user
 RUN addgroup -g 322 lavalink && \
