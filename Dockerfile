@@ -13,7 +13,7 @@ RUN apk add libgcc
 RUN apk add libstdc++
 RUN apk add ncurses-libs
 
-RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
+#RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 
 # Run as non-root user
 RUN addgroup -g 322 lavalink && \
