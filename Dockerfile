@@ -9,15 +9,23 @@ ENV LAVALINK_VERSION=3.6.2
 RUN apk update --no-cache
 RUN apk add --no-cache wget ca-certificates nss mpg123
 
+# Run as non-root user
+RUN addgroup -g 322 lavalink && \
+    adduser -S -u 322 -G lavalink lavalink
+
+
 WORKDIR /app
+
+RUN chown lavalink:lavalink /app
 
 RUN wget "https://github.com/freyacodes/Lavalink/releases/download/${LAVALINK_VERSION}/Lavalink.jar" -P /app
 
-RUN apk del wget ca-certificates
+RUN ln -s /app/config/application.yml /app/application.yml
 
-COPY . .
+USER root
+
+RUN apk del wget ca-certificates
 
 EXPOSE 2333
 
-ENTRYPOINT [ "/app/run.sh" ]
-#ENTRYPOINT "java" "-jar" "/app/Lavalink.jar"
+ENTRYPOINT "java" "-jar" "/app/Lavalink.jar"
