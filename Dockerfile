@@ -1,5 +1,5 @@
-FROM openjdk:19-jdk-alpine3.16
-#FROM adoptopenjdk/openjdk14:alpine-jre
+#FROM openjdk:19-jdk-alpine3.16
+FROM adoptopenjdk/openjdk14:alpine-jre
 #FROM adoptopenjdk/openjdk16:alpine-jre
 LABEL maintainer="Jack@RedshiftEnt.com"
 LABEL version="3.6.2"
@@ -14,7 +14,7 @@ RUN apk add libgcc
 RUN apk add libstdc++
 RUN apk add ncurses-libs
 
-RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
+#RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 
 # Run as non-root user
 RUN addgroup -g 322 lavalink && \
