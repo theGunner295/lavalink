@@ -2,10 +2,10 @@
 FROM adoptopenjdk/openjdk14:alpine-jre
 #FROM adoptopenjdk/openjdk16:alpine-jre
 LABEL maintainer="Jack@RedshiftEnt.com"
-LABEL version="3.7.5"
+LABEL version="3.7.8"
 LABEL description="Alpine Lavalink server"
 
-ENV LAVALINK_VERSION=3.7.5
+ENV LAVALINK_VERSION=3.7.8
 
 # Update system
 RUN apk update --no-cache
