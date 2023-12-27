@@ -1,5 +1,5 @@
 #FROM openjdk:19-jdk-alpine3.16
-FROM adoptopenjdk/openjdk14:alpine-jre
+FROM adoptopenjdk/openjdk16:alpine-jre
 #FROM adoptopenjdk/openjdk16:alpine-jre
 LABEL maintainer="Jack@RedshiftEnt.com"
 LABEL version="4.0.0"
