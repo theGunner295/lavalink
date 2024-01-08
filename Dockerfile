@@ -1,7 +1,4 @@
-#FROM openjdk:19-jdk-alpine3.16
-#FROM adoptopenjdk/openjdk16:alpine-jre
 FROM amazoncorretto:17.0.8-alpine3.18
-#FROM adoptopenjdk/openjdk16:alpine-jre
 LABEL maintainer="Jack@RedshiftEnt.com"
 LABEL version="4.0.0"
 LABEL description="Alpine Lavalink server"
