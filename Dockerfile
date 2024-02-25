@@ -1,9 +1,9 @@
 FROM amazoncorretto:17.0.8-alpine3.18
 LABEL maintainer="Jack@RedshiftEnt.com"
-LABEL version="4.0.0"
+LABEL version="4.0.3"
 LABEL description="Alpine Lavalink server"
 
-ENV LAVALINK_VERSION=4.0.0
+ENV LAVALINK_VERSION=4.0.3
 
 # Update system
 RUN apk update --no-cache
