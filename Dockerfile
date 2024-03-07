@@ -3,7 +3,7 @@ LABEL maintainer="Jack@RedshiftEnt.com"
 LABEL version="4.0.3"
 LABEL description="Alpine Lavalink server"
 
-ENV LAVALINK_VERSION=4.0.3
+ENV LAVALINK_VERSION=4.0.1
 
 # Update system
 RUN apk update --no-cache
