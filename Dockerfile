@@ -23,8 +23,7 @@ WORKDIR /app
 
 RUN chown lavalink:lavalink /app
 
-#RUN wget "https://github.com/lavalink-devs/Lavalink/releases/download/${LAVALINK_VERSION}/Lavalink.jar" -P /app
-COPY Lavalink.jar /app/Lavalink.jar
+RUN wget "https://github.com/lavalink-devs/Lavalink/releases/download/${LAVALINK_VERSION}/Lavalink.jar" -P /app
 
 RUN ln -s /app/config/application.yml /app/application.yml
 
