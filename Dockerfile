@@ -1,9 +1,9 @@
 FROM amazoncorretto:17.0.8-alpine3.18
 LABEL maintainer="Jack@RedshiftEnt.com"
-LABEL version="4.0.4-d1"
+LABEL version="4.0.4"
 LABEL description="Alpine Lavalink server"
 
-ENV LAVALINK_VERSION=4.0.4d1
+ENV LAVALINK_VERSION=4.0.4
 
 # Update system
 RUN apk update --no-cache
@@ -23,8 +23,8 @@ WORKDIR /app
 
 RUN chown lavalink:lavalink /app
 
-RUN wget https://github.com/ZeyoYT/Lavalink/releases/download/Fixed/Lavalink.jar -P /app
-#RUN wget "https://github.com/lavalink-devs/Lavalink/releases/download/${LAVALINK_VERSION}/Lavalink.jar" -P /app
+#RUN wget https://github.com/ZeyoYT/Lavalink/releases/download/Fixed/Lavalink.jar -P /app
+RUN wget "https://github.com/lavalink-devs/Lavalink/releases/download/${LAVALINK_VERSION}/Lavalink.jar" -P /app
 #COPY Lavalink.jar /app/Lavalink.jar
 
 RUN ln -s /app/config/application.yml /app/application.yml
