@@ -21,7 +21,7 @@ stages:
       displayName: Building Lavalink Image
       inputs:
         command: buildAndPush
-        containerRegistry: 'External RS-DockerRegistry'
+        containerRegistry: 'Internal RS-DockerRegistry'
         repository: 'lavalink'
         dockerfile: './Dockerfile'
         tags: latest
